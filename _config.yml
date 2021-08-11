@@ -4,8 +4,4 @@ show_menu: true
 google_analytics:
 theme: jekyll-theme-cayman
 
-# Menu
 
-navigation:
- - {file: "", title: "Home", icon: home}
- - {file: "README.md", title: "About Mel", icon: address-card}
