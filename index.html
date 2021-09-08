@@ -369,9 +369,13 @@
                         <img class="img-fluid" src="assets/imgs/certs/CCSK.png" alt="CCSK"/>
                     </figure>
                     <div class="content text-start">
-                        <div class="action"><a href="https://ccsk.cloudsecurityalliance.org/en">Verify Certification</a></div>
+                        <div class="action">
+                            <a href="https://ccsk.cloudsecurityalliance.org/en">Verify Certification</a>
+                            <div>
+                                <button class="btn" onclick="copyToclip()" type="text" value="iFedvubW3wvBUqU2R6nLpLBJ" id="clip">Copy Cert ID</button>
+                            </div>
+                        </div>
                     </div>
-                    <a class="link-mask" href="https://ccsk.cloudsecurityalliance.org/en"></a>
                 </div>
             </div><!-- //cert 4 -->
         <!--Cert 5-->
@@ -383,9 +387,13 @@
                         <img class="img-fluid" src="assets/imgs/certs/ITIL.png" alt="ITIL"/>
                     </figure>
                     <div class="content text-start">
-                        <div class="action"><a href="https://www.peoplecert.org/for-corporations/certificate-verification-service">Verify Certification</a></div>
+                        <div class="action">
+                            <a href="https://www.peoplecert.org/for-corporations/certificate-verification-service">Verify Certification</a>
+                            <div>
+                                <button class="btn" onclick="copyToclip()" type="text" value="GR750275395ML" id="clip">Copy Cert ID</button>
+                            </div>
                     </div>
-                    <a class="link-mask" href="https://www.peoplecert.org/for-corporations/certificate-verification-service"></a>
+                    </div>
                 </div>
             </div><!-- //cert 5 -->
         </div>
@@ -571,6 +579,7 @@
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript" src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
     <script> document.getElementById("year").innerHTML = `&copy; ${new Date().getFullYear()}` </script>
+    <script> function copyToclip(){navigator.clipboard.writeText(clip.value);}</script>
 </body>
 
 </html>
