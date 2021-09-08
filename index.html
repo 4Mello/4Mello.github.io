@@ -372,7 +372,7 @@
                         <div class="action">
                             <a href="https://ccsk.cloudsecurityalliance.org/en">Verify Certification</a>
                             <div>
-                                <button class="btn" onclick="copyToclip()" type="text" value="iFedvubW3wvBUqU2R6nLpLBJ" id="clip">Copy Cert ID</button>
+                                <button class="btn" onclick="copyToclip(this.getAttribute('id'))" id="clipA" value="iFedvubW3wvBUqU2R6nLpLBJ">Copy Cert ID</button>
                             </div>
                         </div>
                     </div>
@@ -390,9 +390,9 @@
                         <div class="action">
                             <a href="https://www.peoplecert.org/for-corporations/certificate-verification-service">Verify Certification</a>
                             <div>
-                                <button class="btn" onclick="copyToclip()" type="text" value="GR750275395ML" id="clip">Copy Cert ID</button>
+                                <button class="btn" onclick="copyToclip(this.getAttribute('id'))" id="clipB" value="GR750275395ML">Copy Cert ID</button>
                             </div>
-                    </div>
+                        </div>
                     </div>
                 </div>
             </div><!-- //cert 5 -->
@@ -579,7 +579,17 @@
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript" src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
     <script> document.getElementById("year").innerHTML = `&copy; ${new Date().getFullYear()}` </script>
-    <script> function copyToclip(){navigator.clipboard.writeText(clip.value);}</script>
+    <!-- Temp Script -->
+    <script>function copyToclip (id) {
+            var copyText = document.getElementById(id).value;
+            var newcopy = document.createElement('textarea');
+            newcopy.value = copyText;
+            newcopy.setAttribute('readonly', '');
+            document.body.appendChild(newcopy);
+            newcopy.select();
+            document.execCommand('copy');
+            document.body.removeChild(newcopy);
+            }</script>
 </body>
 
 </html>
