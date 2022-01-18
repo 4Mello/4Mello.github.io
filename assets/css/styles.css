@@ -386,8 +386,6 @@ a.btn:hover {
 .timeline .job-desc .sub-list li {
     color: #666;
     font-size: 14px;
-    list-style-type: circle;
-    margin-left: 2rem;
     text-align: left;
 }
 
